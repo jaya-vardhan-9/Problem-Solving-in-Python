@@ -7,7 +7,7 @@ from tqdm import tqdm
 
 # Set the list of Git repository directories
 git_repos = [
-    "D:\git-test",
+    # "D:\git-test",
     "D:\python"
 ]
 
