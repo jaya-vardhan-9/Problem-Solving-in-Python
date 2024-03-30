@@ -1,0 +1,298 @@
+#include <stdio.h>
+
+int main() {
+    
+    printf("hello World\nhi world\nhello me\n");
+    printf("I am from Vit");
+    
+    
+    
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+    
+    
+    
+    int x = 15;
+    float y = 15.2;
+    char k = 'k';
+    char str[500] = "korean";
+    
+    printf("%d\n",x);
+    printf("%f\n",y);
+    printf("%c\n",k);
+    printf("%s\n",str);
+    
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int main() {
+     float p = 22;
+     float t = 9.1;
+     float r = 6;
+     
+     float i = (p*t*r)/100;
+     
+     printf("%f" , i);
+     
+     return 0;
+}
+
+#include <stdio.h>
+
+int main () {
+    float celsius,fahrenheit;
+    printf("Enter value in celsius ");
+    scanf("%f", &celsius);
+    fahrenheit = ((9*celsius)/5)+32;
+    
+    printf("temperature in farenheit is %f" , fahrenheit);
+    
+    return 0;
+}
+
+##########################################################################
+printing the ascii value
+
+#include <stdio.h>
+
+int main() {
+    
+    char jay;
+    printf("Enter a charcter: ");
+    scanf("%c",&jay);
+    printf("%d",jay);
+    return 0;
+}
+...........................................................................
+MATH LIBRARIES = #include <math.h>
+...........................................................................
+compund interests
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float p,r,t;
+    printf("Enter the Principal amount: ");
+    scanf("%f",&p);
+    printf("Enter the rate: ");
+    scanf("%f",&r);
+    printf("Enter the time: ");
+    scanf("%f",&t);
+    float amt = p * ((pow((1 + r / 100), t)));
+    printf("compound intrest is %f",(amt-p));
+}
+................................................................................
+
+#include <stdio.h>
+#include <math.h>
+
+int main () {
+    int x =6;
+    int y = 7;
+     if (x>y) {
+         printf("x is more than y");
+         }
+     else if (x == y) {
+         printf("x is eapual to y");
+     }
+     
+     else {
+         printf("y is more ");
+     }
+    return 0;
+}
+
+....................................................................................
+
+finding a leap year
+
+#include <stdio.h>
+#include <math.h>
+
+int main () {
+    int year;
+    
+    printf("Enter the year:");
+    scanf("%d",&year);
+    
+    if((year%4 == 0 && year%100 != 0)  || (year%400 == 0)) {
+         printf("year is leap year");
+    }
+    else{
+        printf("year is not a leap year ");
+    }
+    
+    
+    return 0;
+}
+...............................................................................................
+
+short hand way of writing if else statememt in c
+
+#include <stdio.h>
+#include <math.h>
+
+int main () {
+    int a;
+    scanf("%d",&a);
+    (a%2 == 0) ? printf("this is an even number") : printf("this is an odd number ");
+return 0;
+}
+
+...................................................................................................
+
+switch cases 
+
+include <stdio.h>
+#include <math.h>
+    int main() {
+        int day;
+        printf("enter the day");
+        scanf("%d",&day);
+        switch (day) {
+            case 1 :
+            printf("monday go to ork");
+            break;
+            case 2 :
+            printf("tuesday keep hanging");
+            break;
+            case 3 :
+            printf("you ra halfway there");
+            break;
+            case 4 :
+            printf("thursday almost there");
+            break;
+            case 5 :
+            printf("friday just there");
+            break;
+            case 6 :
+            printf("saturday you are there");
+            break;
+            case 7 :
+            printf("sunday Enjoy");
+            break;
+        }
+    }
+
+##################################################################################
+
+#include <stdio.h>
+#include <math.h>
+    int main() {
+        int day;
+        printf("enter the day: ");
+        scanf("%d",&day);
+        switch (day) {
+            case 1 :
+                printf("monday go to ork");
+                break;
+            case 2 :
+                printf("tuesday keep hanging");
+                break;
+            case 3 :
+                printf("you ra halfway there");
+                break;
+            case 4 :
+                printf("thursday almost there");
+                break;
+            case 5 :
+                printf("friday just there");
+                break;
+            case 6 :
+                printf("saturday you are there");
+                break;
+            case 7 :
+                printf("sunday Enjoy");
+                break;
+            default:
+                printf("Invalid Input");
+                break;
+            }
+        return 0;    
+    }
+
+..........................................................................................................
+Write a program that prompts the user to input number of calls and calculate the monthly telephone bills as per the following rule:
+Minimum Rs. 200 for up to 100 calls. 
+Plus Rs. 0.60 per call for next 50 calls.
+ Plus Rs. 0.50 per call for next 50 calls. 
+Plus Rs. 0.40 per call for any call beyond 200 calls.
+
+#include <stdio.h>
+int main() {
+    int numCalls;
+    double totalBill = 0.0;
+    printf("Enter the number of calls: ");
+    scanf("%d", &numCalls);
+
+    if (numCalls <= 100) {
+        totalBill = 200.0; 
+    } else if (numCalls <= 150) {
+        totalBill = 200.0 + (numCalls - 100) * 0.60;
+    } else if (numCalls <= 200) {
+        totalBill = 200.0 + 50.0 * 0.60 + (numCalls - 150) * 0.50;
+    } else {
+        totalBill = 200.0 + 50.0 * 0.60 + 50.0 * 0.50 + (numCalls - 200) * 0.40;
+    }
+
+    printf("Your monthly telephone bill is: Rs. %.2lf\n", totalBill);
+
+    return 0;
+}
+
+..................................................................................................................
+
+The marks obtained by a student in 3 different subjects are input by the user. Your program should calculate the average of subjects and display the grade. The student gets a grade as per the following rules:
+Average              Grade
+90-100                   A
+80-89                     B
+70-79                     C
+60-69                      D
+0-59                        F
+
+
+#include <stdio.h>
+
+int main() {
+    float subject1, subject2, subject3, average;
+    char grade;
+
+    printf("Enter marks for Subject 1: ");
+    scanf("%f", &subject1);
+
+    printf("Enter marks for Subject 2: ");
+    scanf("%f", &subject2);
+
+    printf("Enter marks for Subject 3: ");
+    scanf("%f", &subject3);
+
+    average = (subject1 + subject2 + subject3) / 3.0;
+
+    if (average >= 90 && average <= 100) {
+        grade = 'A';
+    } else if (average >= 80 && average < 90) {
+        grade = 'B';
+    } else if (average >= 70 && average < 80) {
+        grade = 'C';
+    } else if (average >= 60 && average < 70) {
+        grade = 'D';
+    } else {
+        grade = 'F';
+    }
+
+    printf("Average marks: %.2f\n", average);
+    printf("Grade: %c\n", grade);
+
+    return 0;
+}
+
